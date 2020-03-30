@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: bisque;
+}
+.root {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+}
+.title-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  /* border: 1; */
+  margin-bottom: 30px;
+  text-align: center;
+  padding:0.1em;
+}
+.player { 
+  text-transform: uppercase;
+}
+.score-board {
+  /* padding:0.3em; */
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.container {
+  /* align-items: center; */
+  /* width: 500px; */
+  min-width: 400px;
+  max-width: 700px;
+  /* background-color: bisque; */
+}
+.board {
+  display : flex;
+  flex-direction: row;
+}
+dialog {
+  text-align: center;
+}
+.reset {
+  width:100%;
+  padding: 20px;
+  border: 1;
+  margin-top: 10px;
+  font-size: 1rem;
+  text-align: center;
+  /* border-radius: 50% 20% / 10% 40%;  */
+  border: solid;
+  border-width: 2px 4px;
+  border-radius: 40px;
+}
+.column {
+  flex: 33%;
+  border-right: 10px solid rgba(0, 0, 0, 0.13);
+}
+div:last-child() {
+  border: none;
+}
+.cell {
+  min-height: 150px;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.13);
+  /* padding: 40px; */
+}
+.column div:last-child {
+  border: none;
+}
+.container div:last-child {
+  border: none;
+}
+.setCross {
+  background-image: url(../images/cross.png);
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: center; 
+}
+.setNought {
+  background-image: url(../images/nought.png);
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rotated {
+  transition-duration: 2s;
+  transition-property: transform;
+  transform: rotate(180deg); /* Equal to rotateZ(45deg) */
+}
+
